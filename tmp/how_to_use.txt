@@ -1,0 +1,24 @@
+Firstly build opt
+
+ninja -C build_rel/ opt
+
+Then use opt
+
+build_rel/bin/opt -passes=mult-pass tmp/a.ll -S -o tmp/output.ll
+
+To see:
+
+cat tmp/output.ll
+
+To run with values:
+
+clang tmp/output.ll -o tmp/test_prog
+
+tmp/test_prog
+
+echo $?
+
+
+Test file in llvm/test/Transforms/Util/mult-pass.ll
+Main cpp in llvm/lib/Transforms/Utils/MultPass.cpp
+Header file in llvm/include/llvm/Transforms/Utils/MultPass.h

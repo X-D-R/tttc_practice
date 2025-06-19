@@ -1,4 +1,5 @@
 add_llvm_component_library(LLVMTransformUtils
+  MultPass.cpp
   AddDiscriminators.cpp
   AMDGPUEmitPrintf.cpp
   ASanStackFrameLayout.cpp
